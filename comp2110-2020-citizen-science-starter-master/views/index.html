@@ -1,0 +1,187 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8">
+    <title>Citizen Science</title>
+    <meta name="viewport" content="width=device-width, initial-scale=1.0"> 
+    <link rel="stylesheet" href="/static/css/style.css" type="text/css">
+
+    <!-- Include Handlebars from a CDN -->
+    <script src="https://cdn.jsdelivr.net/npm/handlebars@latest/dist/handlebars.js"></script>
+    <script src="/static/js/main.js" type=module defer></script>
+  </head>
+  <body>
+
+  <h1>Citizen Science </h1>
+<div id="main">
+    <header>
+      <div id="logo"></div>
+      <nav class="col-3 menu">
+          <ul>
+              <li><a href="#">Home</a></li>
+              <li><a href="#!/users">Users</a></li>
+              <li><a href="#!/observations">Observations</a></li>
+              <li><a href="#!/submit">Submit an observation</a></li>
+          </ul>
+      </nav>
+    </header>
+
+    <div class="col-9" id="content">
+
+      <div id="heading">
+          
+          <hgroup>
+              <!-- <h1>Citizen Science</h1> -->
+              <h2 id="definition"> </h2>
+          </hgroup>
+      
+          <div id="target"></div> 
+
+      </div>
+    </div>
+    </div>
+
+  <footer class="footer">
+
+    <div id="social">
+      <ul>
+        <li id="social-twitter"><a href="#">Twitter</a></li>
+        <li id="social-facebook"><a href="#">Facebook</a></li>
+        <li id="social-instagram"><a href="#">Instagram</a></li>
+      </ul>
+    </div>
+
+    <ul class="footer-tos">
+      <li><a href="#">Terms</a></li>
+      <li><a href="#">Privacy</a></li>
+      <li><a href="#">Cookies</a></li>
+    </ul>
+    
+    <p id="copyright">All content and images subject to copyright &copy; COMP2110 Citizen Science 2020.</p>
+  </footer>
+
+
+  <!-- Templates -->
+
+  <!--Observations View in Navigation-->
+  <script id="tableh" type="text/handlebars-x">
+<table class="units_list">
+<tr>
+  <th> Time </th>
+  <th> </th>
+  <th> Weather </th>
+  <th> Location </th>
+</tr>
+
+      {{#each observationHB}}
+
+      <tr>
+
+          <td class=observation-code data-id={{id}}> <a href='#!observations/{{id}}'> {{timestamp}} </td>
+
+        <td> </td>
+
+          <td> {{weather}} </td>
+          <td>  {{location }}   </td>
+
+
+          
+      </tr>
+      {{/each}}
+</table>
+ </script>
+
+
+
+
+<!-- User view in Navigation-->
+      
+      
+<script id="userh" type="text/handlebars-x">      
+<div class='users-list'>
+<ul >
+  
+{{#each usersHB}}
+              <li class=user-code data-id={{id}}> <a href='#!users/{{id}}'>
+              {{first_name}}   {{last_name}} </a>
+            </li> 
+  
+{{/each}}
+</ul>
+</div>
+</script>
+
+
+
+
+
+
+<!-- Individual user list-->
+<script id="user-deets" type="text/handlebars-x" >
+<ul>
+  <li>ID: {{id}}</li>
+  <li>Name: {{first_name}}   {{last_name}} </li> 
+  <li>Email ID: {{email}}</li>
+</ul>
+  
+<img src="{{avatar}}">
+</br>
+</br>
+<h3 id="assoUser"> Associated Observations: </h3>
+
+</script>
+
+<!-- Individual user list-->
+<script id="observ-deets" type="text/handlebars-x">
+<ul>
+  <li>Timestamp : {{timestamp}} </li> 
+  <li>Weather :     {{weather}}</li>
+  <li>Location :    {{location}} </li>
+  <li>Temprature :  {{temperature}}</li>
+  <li>Wind :        {{wind}}</li>
+  <li>Location :    {{location}}</li>
+  <li>Height :      {{height}}</li>
+  <li>Girth :       {{girth}}</li>
+  <li>Leaf-size :   {{leaf_size}}</li>
+  <li>Leaf-shape :  {{leaf_shape}}</li>
+  <li>Bark-colour : {{bark_colour}}</li>
+  <li>Bark-texture : {{bark_texture}}</li>
+</ul>
+</script>
+
+
+<!--Submisiion form-->
+
+
+<script id='submission-form' type="text/handlebars-x">
+<form id="units-form">
+        < label for="participant" > participant:</label >
+          <input name="participant"></input>
+            <label for="temperature">temperature:</label>
+            <input name="temperature"></input>
+              <label for="weather"> weather: </label>
+              <input name="weather"></input>
+              <label for="wind"> wind: </label>
+              <input name="wind"></input>
+              <label for="location"> location: </label>
+              <input name="location"></input>
+              <label for="height"> height: </label>
+              <input name="height"></input>
+              <label for="girth"> girth: </label>
+              <input name="girth"></input>
+              <label for="leaf_size"> leaf_size: </label>
+              <input name="leaf_size"></input>
+              <label for="leaf_shape"> leaf_shape: </label>
+              <input name="leaf_shape"></input>
+              <label for="bark_colour"> bark_colour: </label>
+              <input name="bark_colour"></input>
+              <label for="bark_texture"> bark_texture: </label>
+              <input name="bark_texture"></input>
+              <input type="submit"> </input>
+</form>
+
+</script>
+
+
+  </body>
+</html>

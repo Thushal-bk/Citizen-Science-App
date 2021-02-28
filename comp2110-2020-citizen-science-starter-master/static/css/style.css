@@ -1,0 +1,190 @@
+/* sample spreadshet - you should replace all of this! */
+*{box-sizing: border-box;}
+
+
+h1 {
+    background-color: #ff6347;
+    color: #ffffff;
+    padding: 15px;
+    text-align: center;
+    font-family: sans-serif;
+    font-style: italic;
+    margin: 0px;
+}
+
+#content {
+    margin-bottom: 70px;
+}
+
+body {
+    margin:  0px    ;
+}
+
+header {
+    width: 100%;
+    background-color: coral;
+}
+
+#heading {
+    background-color:white;
+    font-family: sans-serif;
+}
+
+#whatis {
+    width: 300px;
+    background-color: forestgreen;
+    border: 10px solid orchid;
+}
+
+
+
+.footer {
+    background-color:  #c9c6c6d7;
+    color: #ffffff;
+    text-align: center;
+    clear: left;
+    padding:  10px;
+    
+}
+
+
+#social  a{
+    background-color: #33b5e5;
+    color: #ffffff;
+    text-decoration: none;
+    padding: 10px 90px ;
+    box-shadow: 0 1px 3px rgba(0,0,0,0.12), 0 1px 2px rgba(0,0,0,0.24);
+    font-family: sans-serif;
+    margin: 50px;
+}
+
+#social a:hover{
+    background-color: #0099cc;
+}
+
+
+#social li {
+    list-style: none;
+    display: inline;
+    
+}
+
+
+
+.footer-tos li {
+    list-style: none;
+    display: inline;
+    font-family: sans-serif;
+
+}
+
+
+.col-3 {width: 25%;}
+.col-9 {width: 75%;}
+
+
+
+[class*="col-"]{
+    float: left;
+    padding: 15px;
+}
+
+
+#content::after {
+content: "";
+clear: both;
+display: table;
+}
+
+@media screen and (max-width:600px){
+    [class*="col-"]{
+        width: 100%;
+    }
+}
+
+.menu a{
+    background-color: #33b5e5;
+    color: #ffffff;
+    text-decoration: none;
+    display: block;
+    padding: 10px 10px;
+    margin: 10px;
+    text-align: center;
+    box-shadow: 0 1px 3px rgba(0,0,0,0.12), 0 1px 2px rgba(0,0,0,0.24);
+    font-family: sans-serif;
+}
+.menu a:hover{
+    background-color: #0099cc;
+}
+
+.menu li {
+    list-style: none;
+}
+
+
+.units_list a{
+    text-decoration: none;
+}
+.users-list a{
+    text-decoration: none;
+}
+
+
+
+#submission-form label  {
+    display: block;
+    padding: 0.25rem 0;
+    text-transform: uppercase;
+    margin: 0.25rem 0;
+}
+
+#submission-form select {
+    display: block;
+    padding: 0.25rem 0;
+    margin: 0.25rem 0;
+    text-transform: uppercase;
+    width: 70%;
+}
+
+#submission-form input {
+    display: block;
+    width: 70%;
+}
+
+#submitBtn {
+    background-color: #33b5e5;
+    color: #ffffff;
+    text-align: center;
+    box-shadow: 0 1px 3px rgba(0,0,0,0.12), 0 1px 2px rgba(0,0,0,0.24);
+    font-family: sans-serif;
+    padding: 0.5rem;
+    margin: 1rem 0;
+    
+
+}
+
+.units_list a {
+    text-decoration: underline;
+    color: black;
+
+}
+
+.units_list a:hover {
+    color: #33b5e5;
+}
+
+
+
+.users-list a {
+    text-decoration: underline;
+    color: black;
+    
+}
+
+.users-list a:hover {
+color: #33b5e5;
+}
+
+#assoUser h3 {
+    text-align: center;
+}
