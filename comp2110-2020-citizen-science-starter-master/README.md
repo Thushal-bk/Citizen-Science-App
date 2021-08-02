@@ -1,6 +1,6 @@
-# COMP2110/6110 Starter Kit - Citizen Science Web Application
+# COMP2110/6110 - Citizen Science Web Application
 
-This is the starter kit for the 2020 Web Application assignment. It contains a 
+This is a citizen science Web Application developed for my Web Technologies assignment in 2020. It contains a 
 Python based web server that provides a JSON API to the data required for
 the application.  You can run the Python server with the command:
 
@@ -24,10 +24,10 @@ by the application.
 
 I have provided a few Javascript files in the project:
 * `main.js` is the main entry point and is referenced from the `index.html` file
-* `model.js` contains the outline of the Model object and the required methods that you must implement
+* `model.js` contains the code to update to retrieve, update and store user information
 * `util.js` provides a utility function
-* `views.js` is empty for you to add your view functions to
-
+* `views.js` is the code that is used to style the application
+* 
 The `cypress` directory contains tests to be run with the [Cypress](https://cypress.io) testing tool.
 
 
